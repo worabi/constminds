@@ -4,9 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Constructive Minds</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+:root {
+    --blue: #0d3b66;
+    --orange: #f77f00;
+    --green: #2a9d2f;
+    --dark: #0f172a;
+    --light: #f8fafc;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,146 +24,186 @@
 
 body {
     line-height: 1.6;
+    background: var(--light);
     color: #333;
 }
 
+/* HEADER */
 header {
-    background: rgba(0,0,0,0.75);
-    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 8%;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
 
-header .logo {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 1px;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-nav {
-    float: right;
+.logo-container img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--blue);
 }
 
 nav a {
-    color: white;
-    margin-left: 25px;
+    margin-left: 30px;
     text-decoration: none;
-    font-weight: 500;
+    color: var(--dark);
+    font-weight: 600;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #f4b400;
+    color: var(--green);
 }
 
+/* HERO */
 .hero {
     height: 100vh;
-    background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') no-repeat center center/cover;
+    background: linear-gradient(120deg, var(--blue), var(--green));
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
     color: white;
     padding: 0 20px;
 }
 
-.hero-overlay {
-    background: rgba(0,0,0,0.6);
-    padding: 40px;
-    border-radius: 10px;
+.hero-content {
+    max-width: 800px;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 52px;
+    font-weight: 800;
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
-.btn {
-    background: #f4b400;
-    color: #000;
-    padding: 14px 30px;
+.btn-primary {
+    background: var(--orange);
+    color: white;
+    padding: 16px 36px;
     text-decoration: none;
-    font-weight: 600;
-    border-radius: 5px;
+    border-radius: 50px;
+    font-weight: 700;
     transition: 0.3s;
 }
 
-.btn:hover {
-    background: #d99800;
+.btn-primary:hover {
+    background: #d96c00;
+    transform: translateY(-3px);
 }
 
+/* SECTIONS */
 .section {
-    padding: 80px 10%;
+    padding: 100px 10%;
     text-align: center;
 }
 
 .section h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 20px;
-    color: #1f2d3d;
+    color: var(--blue);
 }
 
+.section p.section-sub {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    color: #666;
+}
+
+/* SERVICES */
 .services {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 40px;
 }
 
 .service-box {
     flex: 1;
     min-width: 280px;
     margin: 15px;
-    padding: 30px;
-    background: #f8f9fa;
-    border-radius: 10px;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: 0.3s;
 }
 
 .service-box:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
 }
 
 .service-box h3 {
     margin-bottom: 15px;
-    color: #f4b400;
+    color: var(--green);
 }
 
+/* ABOUT */
 .about {
-    background: #1f2d3d;
+    background: linear-gradient(120deg, var(--blue), var(--green));
     color: white;
+    padding: 100px 10%;
 }
 
-.about p {
-    max-width: 800px;
-    margin: 0 auto;
+.about h2 {
+    margin-bottom: 20px;
 }
 
+/* CTA */
 .cta {
-    background: #f4b400;
-    color: black;
-    padding: 60px 10%;
+    background: var(--orange);
+    color: white;
+    padding: 80px 10%;
     text-align: center;
 }
 
 .cta h2 {
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
+.cta .btn-primary {
+    background: white;
+    color: var(--orange);
+}
+
+.cta .btn-primary:hover {
+    background: #f1f1f1;
+}
+
+/* FOOTER */
 footer {
-    background: #111;
+    background: var(--dark);
     color: #aaa;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .services {
+        flex-direction: column;
+    }
 }
 </style>
 </head>
@@ -163,7 +211,10 @@ footer {
 <body>
 
 <header>
-    <div class="logo">Constructive Minds</div>
+    <div class="logo-container">
+        <img src="logo.png" alt="Constructive Minds Logo">
+        <div class="logo-text">Constructive Minds</div>
+    </div>
     <nav>
         <a href="#services">Services</a>
         <a href="#about">About</a>
@@ -172,45 +223,46 @@ footer {
 </header>
 
 <section class="hero">
-    <div class="hero-overlay">
-        <h1>Building Success Through Strategic Construction Leadership</h1>
-        <p>Delivering clarity, control, and confidence to your construction projects.</p>
-        <a href="#contact" class="btn">Request a Consultation</a>
+    <div class="hero-content">
+        <h1>Driving Construction Growth with Strategic Leadership</h1>
+        <p>We bring clarity, control, and measurable results to every construction project.</p>
+        <a href="#contact" class="btn-primary">Request a Free Consultation</a>
     </div>
 </section>
 
 <section id="services" class="section">
-    <h2>Our Services</h2>
+    <h2>Our Expertise</h2>
+    <p class="section-sub">Professional construction leadership designed to maximize performance and profitability.</p>
     <div class="services">
         <div class="service-box">
             <h3>Project Management</h3>
-            <p>End-to-end oversight ensuring projects are delivered on time and within budget.</p>
+            <p>Complete oversight to ensure your project is delivered on time, on budget, and above expectations.</p>
         </div>
         <div class="service-box">
-            <h3>Cost Estimating & Budget Control</h3>
-            <p>Accurate forecasting and cost control strategies to protect your investment.</p>
+            <h3>Cost Control</h3>
+            <p>Strategic forecasting and financial discipline that protects your investment.</p>
         </div>
         <div class="service-box">
-            <h3>Schedule & Risk Management</h3>
-            <p>Proactive risk mitigation and schedule optimization for successful delivery.</p>
+            <h3>Risk & Scheduling</h3>
+            <p>Proactive mitigation strategies that keep your project moving forward confidently.</p>
         </div>
     </div>
 </section>
 
-<section id="about" class="section about">
-    <h2>Why Choose Constructive Minds</h2>
+<section id="about" class="about">
+    <h2>Why Choose Constructive Minds?</h2>
     <p>
-        With decades of combined industry experience, Constructive Minds provides strategic
-        leadership, technical expertise, and transparent communication to ensure your project’s success.
-        We partner with owners, developers, and contractors to drive performance and deliver measurable results.
+        With decades of combined industry experience, we partner with owners, developers,
+        and contractors to drive efficiency, reduce risk, and deliver measurable growth.
+        Our mission is simple: build smarter, lead stronger, and grow faster.
     </p>
 </section>
 
 <section class="cta" id="contact">
-    <h2>Ready to Start Your Next Project?</h2>
-    <p>Let’s discuss how we can help you achieve your construction goals.</p>
+    <h2>Let’s Build Something Exceptional</h2>
+    <p>Schedule your consultation today and move your project forward with confidence.</p>
     <br>
-    <a href="mailto:worabi@gmail.com" class="btn">Contact Us Today</a>
+    <a href="mailto:worabi@gmail.com" class="btn-primary">Contact Us Today</a>
 </section>
 
 <footer>
