@@ -1,291 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Constructive Minds</title>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<style>
-
-/* ===== RESET ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ===== BODY ===== */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-    background: #ffffff;
-    color: #111;
-    line-height: 1.6;
-}
-
-/* ===== NAV ===== */
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(8px);
-    display: flex;
-    justify-content: space-between;
-    padding: 18px 8%;
-    border-bottom: 1px solid #eee;
-    z-index: 1000;
-}
-
-.logo {
-    width: auto;
-    height: 40px;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-}
-
-nav ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-nav a {
-    text-decoration: none;
-    color: #444;
-    font-size: 14px;
-}
-
-/* ===== SECTIONS ===== */
-section {
-    padding: 120px 10%;
-}
-
-.hero {
-    padding-top: 180px;
-    max-width: 900px;
-}
-
-.hero h1 {
-    font-size: 54px;
-    font-weight: 600;
-}
-
-.hero p {
-    margin-top: 20px;
-    font-size: 20px;
-    color: #555;
-}
-
-.btn {
-    margin-top: 30px;
-    display: inline-block;
-    padding: 14px 28px;
-    border: 1px solid #111;
-    text-decoration: none;
-    color: #111;
-    transition: 0.3s;
-}
-.btn:hover {
-    background: #111;
-    color: white;
-}
-
-/* ===== GRID ===== */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.card {
-    border-top: 2px solid #111;
-    padding-top: 15px;
-    transition: 0.3s;
-}
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* ===== CHART ===== */
-.chart {
-    max-width: 700px;
-    margin: 60px auto;
-}
-
-/* ===== INSIGHT BLOCK ===== */
-.insight {
-    border-left: 3px solid #111;
-    padding-left: 20px;
-    margin-bottom: 30px;
-}
-
-/* ===== CONTACT ===== */
-form {
-    max-width: 500px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    margin-bottom: 15px;
-}
-
-/* ===== ANIMATION ===== */
-.fade {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.8s;
-}
-.fade.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ===== FOOTER ===== */
-footer {
-    padding: 60px 10%;
-    border-top: 1px solid #eee;
-    font-size: 14px;
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Constructive Minds | Smarter Strategies for Better Project Delivery</title>
+  <meta name="description" content="Constructive Minds provides forward-thinking construction consulting, planning, project controls, and delivery strategy for construction management firms and project owners." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Constructive Minds home">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 120 120" role="img" aria-label="Constructive Minds icon placeholder">
+          <path class="mark-green" d="M25 72 C35 95 77 91 101 46 L109 53 L96 26 L70 39 L79 45 C67 66 49 77 36 74 L36 36 L68 12 L68 64 L86 50 L86 91 L70 91 L70 75 C58 86 36 91 25 72Z"/>
+          <path class="mark-lines" d="M44 39 H62 M44 55 H62 M44 39 V73 M62 30 V78"/>
+          <rect class="mark-orange" x="29" y="55" width="13" height="13" rx="1"/>
+        </svg>
+      </div>
+      <span class="brand-text">Constructive Minds</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- NAV -->
-<nav>
-    <div class="logo">
-    <img src="CoMi_logo.png" alt="Constructive Minds Logo">
-</div>
-    <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#insights">Insights</a></li>
-        <li><a href="#training">Training</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Construction Management Consulting • Planning • Project Intelligence</p>
+        <h1>Smarter Strategies for Better Project Delivery</h1>
+        <p class="hero-copy">Constructive Minds helps construction management firms, project teams, and owners turn complexity into clarity through strategic planning, forward-looking controls, and practical delivery insight.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="mailto:hello@constructiveminds.com">Start a Conversation</a>
+          <a class="btn secondary" href="#services">Explore Capabilities</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Core value statement">
+        <div class="metric"><span>01</span><strong>Plan smarter</strong><p>Align scope, schedule, cost, risk, and decisions before issues become expensive.</p></div>
+        <div class="metric"><span>02</span><strong>Control better</strong><p>Use structured project intelligence to improve visibility, accountability, and outcomes.</p></div>
+        <div class="metric"><span>03</span><strong>Deliver stronger</strong><p>Support teams with practical consulting grounded in construction realities.</p></div>
+      </aside>
+    </section>
 
-<!-- HERO -->
-<section class="hero fade">
-    <h1>Better Decisions Drive Better Construction Outcomes</h1>
-    <p>
-        We help contractors, construction managers, and owners optimize cost,
-        schedule, and risk through advanced analytics and practical expertise.
-    </p>
-    <a href="#contact" class="btn">Start a Conversation</a>
-</section>
+    <section class="section intro">
+      <div>
+        <p class="section-kicker">Built for the future of construction delivery</p>
+        <h2>Advisory support for firms that want to lead, not react.</h2>
+      </div>
+      <p>Construction projects are becoming more complex, data-rich, and risk-sensitive. Constructive Minds provides a forward-thinking consulting perspective that blends construction management experience, planning discipline, and performance-focused decision support.</p>
+    </section>
 
-<!-- SERVICES -->
-<section id="services" class="fade">
-    <h2>Services</h2>
-    <div class="grid">
-        <div class="card"><h3>Cost & Bidding</h3><p>Independent estimates and strategic bid support.</p></div>
-        <div class="card"><h3>Project Controls</h3><p>Integrated cost and schedule performance systems.</p></div>
-        <div class="card"><h3>Risk & Decision</h3><p>Quantifying uncertainty for better decisions.</p></div>
-        <div class="card"><h3>Optimization</h3><p>Time–cost tradeoffs and efficient execution plans.</p></div>
-    </div>
-</section>
+    <section id="services" class="section services">
+      <div class="section-heading">
+        <p class="section-kicker">What we help with</p>
+        <h2>Consulting capabilities</h2>
+      </div>
+      <div class="grid cards">
+        <article class="card"><span class="card-icon">▧</span><h3>Strategic Project Planning</h3><p>Early-stage planning, delivery strategy, stakeholder alignment, phasing, and implementation roadmaps.</p></article>
+        <article class="card"><span class="card-icon">↗</span><h3>Project Controls & Performance</h3><p>Schedule, cost, risk, reporting, dashboards, and performance frameworks that support better decisions.</p></article>
+        <article class="card"><span class="card-icon">◫</span><h3>Construction Management Advisory</h3><p>Independent perspective for CM firms and project owners seeking stronger processes and delivery execution.</p></article>
+        <article class="card"><span class="card-icon">◇</span><h3>Process Improvement</h3><p>Workflow reviews, standards, playbooks, lessons learned, and scalable management systems.</p></article>
+        <article class="card"><span class="card-icon">✦</span><h3>Innovation & Digital Readiness</h3><p>Practical guidance for analytics, BIM/VDC alignment, data workflows, and technology-enabled decision-making.</p></article>
+        <article class="card"><span class="card-icon">●</span><h3>Executive Support</h3><p>Clear briefing materials, leadership dashboards, risk narratives, and high-impact recommendations.</p></article>
+      </div>
+    </section>
 
-<!-- CHART -->
-<section class="fade">
-    <h2 style="text-align:center;">Performance Impact</h2>
-    <div class="chart">
-        <canvas id="chart1"></canvas>
-    </div>
-</section>
+    <section id="approach" class="section approach">
+      <div class="approach-panel">
+        <p class="section-kicker">How we work</p>
+        <h2>Clear thinking. Practical tools. Measurable progress.</h2>
+        <div class="steps">
+          <div><span>Assess</span><p>Understand the project, organization, risks, constraints, and decision environment.</p></div>
+          <div><span>Structure</span><p>Translate complexity into clear frameworks, priorities, controls, and action plans.</p></div>
+          <div><span>Advance</span><p>Support implementation with concise recommendations, useful tools, and ongoing advisory insight.</p></div>
+        </div>
+      </div>
+    </section>
 
-<!-- INSIGHTS -->
-<section id="insights" class="fade">
-    <h2>Selected Insights</h2>
+    <section class="section statement">
+      <h2>Designed for teams that need both construction judgment and forward-thinking strategy.</h2>
+      <p>Whether improving project controls, preparing a delivery strategy, strengthening management systems, or supporting executive decisions, Constructive Minds focuses on practical intelligence that moves projects forward.</p>
+    </section>
 
-    <div class="insight">
-        <h3>Time–Cost Tradeoff</h3>
-        <canvas id="chart2"></canvas>
-    </div>
+    <section id="contact" class="section contact">
+      <div>
+        <p class="section-kicker">Placeholder page</p>
+        <h2>Let’s build the full site gradually.</h2>
+        <p>This temporary page is structured so the messaging, services, visuals, and contact information can be refined over time without starting over.</p>
+      </div>
+      <div class="contact-card">
+        <h3>Start a conversation</h3>
+        <p><strong>Email:</strong> hello@constructiveminds.com</p>
+        <p><strong>Location:</strong> Miami, Florida</p>
+        <a class="btn primary full" href="mailto:hello@constructiveminds.com">Contact Constructive Minds</a>
+      </div>
+    </section>
+  </main>
 
-    <div class="insight">
-        <h3>Risk Reduction</h3>
-        <p>Structured decision frameworks significantly improve predictability and reduce exposure.</p>
-    </div>
-</section>
-
-<!-- TRAINING -->
-<section id="training" class="fade">
-    <h2>Training</h2>
-    <div class="grid">
-        <div class="card">Cost Estimating</div>
-        <div class="card">Project Management</div>
-        <div class="card">Risk Analysis</div>
-        <div class="card">Construction Economics</div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="fade">
-    <h2>Contact</h2>
-    <form>
-        <input placeholder="Name">
-        <input placeholder="Email">
-        <textarea placeholder="Message"></textarea>
-        <button class="btn">Submit</button>
-    </form>
-</section>
-
-<footer>
-    © 2026 Construction Decision Intelligence
-</footer>
-
-<script>
-
-/* ===== SCROLL ANIMATION ===== */
-const faders = document.querySelectorAll('.fade');
-window.addEventListener('scroll', () => {
-    faders.forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-            el.classList.add('show');
-        }
-    });
-});
-
-/* ===== CHART 1 ===== */
-new Chart(document.getElementById('chart1'), {
-    type: 'bar',
-    data: {
-        labels: ['Cost Accuracy', 'Schedule Reliability', 'Risk Visibility'],
-        datasets: [{
-            data: [20, 25, 30]
-        }]
-    },
-    options: {
-        plugins: { legend: { display: false }},
-        scales: { y: { beginAtZero: true }}
-    }
-});
-
-/* ===== CHART 2 ===== */
-new Chart(document.getElementById('chart2'), {
-    type: 'line',
-    data: {
-        labels: [1,2,3,4,5],
-        datasets: [{
-            data: [100, 90, 85, 95, 120],
-            tension: 0.4
-        }]
-    },
-    options: {
-        plugins: { legend: { display: false }},
-        scales: { y: { beginAtZero: false }}
-    }
-});
-
-</script>
-
+  <footer class="footer">
+    <span>© <span id="year"></span> Constructive Minds. All rights reserved.</span>
+    <span>Smarter Strategies for Better Project Delivery</span>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
