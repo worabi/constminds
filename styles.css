@@ -92,8 +92,8 @@ img{
 }
 
 .brand-mark img{
-  width:100px !important;
-  height:100px !important;
+  width:56px !important;
+  height:56px !important;
 
   object-fit:contain;
   display:block;
