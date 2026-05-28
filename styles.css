@@ -79,9 +79,9 @@ img{
 }
 
 .brand-mark{
-  width:100px;
-  height:100px;
-  min-width:100px;
+  width:56px;
+  height:56px;
+  min-width:56px;
 
   display:flex;
   align-items:center;
@@ -92,9 +92,8 @@ img{
 }
 
 .brand-mark img{
-  width:56px !important;
-  height:56px !important;
-
+  width:100%;
+  height:100%;
   object-fit:contain;
   display:block;
 }
